@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		
+		
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+  		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		
+		<div class="container">
+			
+			<header class="codrops-header">
+				<h1>Tab Styles Inspiration <span>A small collection of styles for tabs</span></h1>
+				
+			</header>
+			
+			<section>
+				<div class="tabs tabs-style-linemove">
+					<nav>
+						<ul>
+							<li><a href="#section-linemove-1" class="icon icon-home"><span>Home</span></a></li>
+							<li><a href="#section-linemove-2" class="icon icon-box"><span>Archive</span></a></li>
+							<li><a href="#section-linemove-3" class="icon icon-display"><span>Analytics</span></a></li>
+							<li><a href="#section-linemove-4" class="icon icon-upload"><span>Upload</span></a></li>
+							<li><a href="#section-linemove-5" class="icon icon-tools"><span>Settings</span></a></li>
+						</ul>
+					</nav>
+					<div class="content-wrap">
+						<section id="section-linemove-1"><p>1</p></section>
+						<section id="section-linemove-2"><p>2</p></section>
+						<section id="section-linemove-3"><p>3</p></section>
+						<section id="section-linemove-4"><p>4</p></section>
+						<section id="section-linemove-5"><p>5</p></section>
+					</div><!-- /content -->
+				</div><!-- /tabs -->
+			</section>
+			
+		</div><!-- /container -->
+		<script src="js/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+		</script>
+	</body>
+</html>

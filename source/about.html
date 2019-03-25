@@ -1,0 +1,626 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+
+<title>K.A.S - Housing</title> 
+
+<!-- Styles -->
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Poppins:300,400,500,600,700" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" media="screen">
+<style>
+  #wrapper{
+    position: relative;
+    width:100%;
+    min-height:55vw;
+    overflow: hidden;
+  }
+  
+  .layer{
+    position: absolute;
+    width:100vw;
+    min-height: 55vw;
+    overflow: hidden;
+  }
+  
+  .layer .content-wrap{
+    position: absolute;
+    width:100vw;
+    min-height: 55vw;
+  }
+  
+  .layer .content-body{
+    width:25%;
+    position:absolute;
+    top:50%;
+    text-align: center;
+    transform:translateY(-50%);
+    color:#fff;
+  }
+  
+  .layer img{
+    position: absolute;
+    width:50%;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+  }
+  
+  .layer h1{
+    font-size:2em;
+  }
+  
+  .bottom{
+    background:#222;
+    z-index:1;
+  }
+  
+  .bottom .content-body{
+    right:5%;
+  }
+  
+  .bottom h1{
+    color:#FDAB00;
+  }
+  
+  .top{
+    background:#eee;
+    color:#222;
+    z-index:2;
+    width:50vw;
+  }
+  
+  .top .content-body{
+    left: 5%;
+    color:#222;
+  }
+  
+  .handle{
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color: #FDAB00;
+    width:5px;
+    top:0;
+    left: 50%;
+    z-index:3;
+  }
+  
+  .skewed .handle{
+    top:50%;
+    transform:rotate(30deg) translateY(-50%);
+    height: 200%;
+    transform-origin:top;
+  }
+  
+  .skewed .top{
+    transform: skew(-30deg);
+    margin-left:-1000px;
+    width: calc(50vw + 1000px);
+  }
+  
+  .skewed .top .content-wrap{
+    transform: skew(30deg);
+    margin-left:1000px;
+  }
+  .about-pg{
+    margin-right: -60px!important;
+    margin-left: -60px!important;
+  }
+  .about{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        font-size: 40px;
+    }
+    .about li{
+        list-style: none;
+        font-size: 5em;
+        letter-spacing: 40px;
+        animation: animate 3s linear infinite;
+    }
+    @keyframes animate {
+        0%{
+            
+            opacity: 0;
+            color: #3e3934;
+        }
+        10%{
+            opacity: 1;
+                    }
+        50%{
+           
+            opacity: 1
+        }
+        100%{
+            
+            opacity: 0;
+            color: #fff;
+        }
+    }
+   .mission{    
+    position: relative;
+    bottom: 100px;}
+    .misvis{
+    text-align: justify;
+    width: 77%;
+    font-family: cursive;
+    font-size: 18px;
+    position: relative;
+    left: 40px;
+    }
+</style>
+<style type="text/css">
+      /* Header */
+
+  #header {
+    background-attachment: scroll, fixed,fixed;
+    background-image: url(directive/assets/css/images/top-3200.svg), url(images/aboutdemo.jpg), url(directive/images/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10em 0 20em 0;
+    position: relative;
+    text-align: center;
+  }
+
+    #header:before, #header:after {
+      background: rgba(224, 224, 224, 0.75);
+      content: '';
+      left: 50%;
+      position: absolute;
+      width: 1px;
+      z-index: 0;
+    }
+
+    #header:before {
+      height: calc(100% - 50px);
+      opacity: 0.15;
+      top: 0;
+    }
+
+    #header:after {
+      bottom: 0;
+      height: 50px;
+    }
+
+    #header a {
+      border-bottom-color: rgba(255, 255, 255, 0.35);
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+      #header a:hover {
+        border-bottom-color: transparent;
+        color: #4eb980;
+      }
+
+    #header strong, #header b {
+      color: #ffffff;
+    }
+
+    #header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
+      color: #ffffff;
+    }
+
+    #header input[type="submit"],
+    #header input[type="reset"],
+    #header input[type="button"],
+    #header .button {
+      background: #ffffff;
+      color: #544d55;
+    }
+
+    #header .logo {
+      background: #4eb980;
+      border-radius: 100%;
+      color: #ffffff;
+      cursor: default;
+      display: inline-block;
+      font-size: 2.25em;
+      height: 2.35em;
+      line-height: 2.35em;
+      margin: 0 0 0.75em 0;
+      text-align: center;
+      width: 2.35em;
+    }
+
+      #header .logo.fa-paper-plane-o:before {
+        left: -0.075em;
+        position: relative;
+      }
+
+    #header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      text-shadow: #000000 4px 4px 8px;
+    }
+
+    #header p {
+      font-size: 1.5em;
+      line-height: 1.5em;
+      margin: 0.25em 0 0 0;
+    }
+.whowe{  
+    padding-top: 70px;
+    position: relative;
+    right: 79px;
+    font-family: cursive;
+    font-weight: 500;
+    font-size: 15px;}
+    .whowe1{  
+    padding-top: 70px;
+    
+    font-family: cursive;
+    font-weight: 500;
+    font-size: 15px;}
+    .number {
+   display: inline-block;
+    font-weight: 600;
+    line-height: 1;
+    font-size: 10.71rem;
+    margin-right: 7.7rem;
+    margin-top: -44px;
+    color: #ec0000;
+    position: relative;
+    left: 98px;
+    bottom: -32px;
+}
+.text {
+        display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.181;
+    text-transform: uppercase;
+    position: relative;
+    top: 32px;
+    left: -12px;
+}
+.shape-2{
+    background-color: #f8f8f8;
+    width: 100%;
+    height: 120px;
+    box-shadow: #ccc 0px 0px 9px;
+  }
+  .pad1{
+    width: 100%;
+    height: 5px;
+  }
+  .parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+</head>
+<body>
+<div class="animsition">  
+  <div class="wrapper boxed">
+
+    <!-- Content CLick Capture-->
+
+    <div class="click-capture"></div>
+
+    <!-- Sidebar Menu-->
+
+    <div class="menu">
+      <span class="close-menu icon-cross2 right-boxed"></span>
+      <div class="menu-lang right-boxed">
+        <img alt="" class="img-responsive1" src="images/mission.png" >
+        
+      </div>
+      <ul class="menu-list right-boxed">
+       <li class="active">
+          <a  href="index.html">Home</a>
+          
+        </li>
+        <li>
+          <a href="about.html">About</a>
+         
+        </li>
+         <li>
+          <a href="ourservice.html">Our Metrial</a>
+         
+        </li>
+         <li>
+          <a href="facilities.html">Feacility</a>
+         
+        </li>
+       
+        <li>
+          <a href="#">Property Details</a>
+          
+        </li>
+        <li>
+          <a href="#">Buyer Guide</a>
+          
+        </li>
+        <li>
+          <a href="#">Gallery</a>
+          
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+         
+        </li>
+      </ul>
+      <div class="menu-footer right-boxed">
+        <div class="social-list">
+          <a href="" class="icon ion-social-twitter"></a>
+          <a href="" class="icon ion-social-facebook"></a>
+          <a href="" class="icon ion-social-googleplus"></a>
+          <a href="" class="icon ion-social-linkedin"></a>
+          <a href="" class="icon ion-social-dribbble-outline"></a>
+        </div>
+        <div class="copy">© K.A.S Housing Pvt Ltd 2017. All Rights Reseverd<br> Design by LRB TECH</div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+
+    <header class="navbar boxed js-navbar">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="brand" href="#">
+          <img class="brand-img" alt="" src="images/logo-header.png">
+        
+      </a>
+
+      <div class="social-list hidden-xs">
+        <a href="" class="icon ion-social-twitter"></a>
+        <a href="" class="icon ion-social-facebook"></a>
+        <a href="" class="icon ion-social-googleplus"></a>
+        <a href="" class="icon ion-social-linkedin"></a>
+        <a href="" class="icon ion-social-dribbble-outline"></a>
+      </div>
+
+      <div class="navbar-spacer hidden-sm hidden-xs"></div>
+
+      <address class="navbar-address hidden-sm hidden-xs">call us: <span class="text-dark">(+91) 452 4231010</span></address>
+    </header>
+    
+    <!-- Pageheader -->
+
+
+<!-- Header -->
+      <div id="header">
+
+       
+        <h1>Welcome To <span style="color: #ce0000;">K.A.S</span> Housing Pvt Ltd</h1>
+        <p>
+        Home of Quality Life of Style</p>
+      </div>
+
+
+    <div class="container-fluid">
+        <div class="row about-pg">
+           <!--  <div class="content-entry-image">
+              <ul class="about">
+                <li>A</li>
+                <li>B</li>
+                <li>O</li>
+                <li>U</li>
+                <li>T</li>
+               
+                </ul>
+              </div> -->
+
+              
+            
+              <div class="row">
+                <div class="col-sm-6 col-lg-6 col-lg-offset-5 col-sm-offset-5 who-we col-md-6">
+                  <h1 style="position: relative;right: 30px;">WHO WE ARE</h1>
+                  <div class="title-hr"></div>
+                </div>
+               
+                <div class="col-sm-4 col-lg-4 col-md-4 col-lg-offset-0 col-sm-offset-0 mission">
+                  <img alt="" class="img-responsive" src="images/mission.png">
+                   <div class="number">27</div>
+                              <div class="text">Years<br>Experience<br>Working</div>
+                </div>
+                  <div class="col-sm-4 col-lg-4 col-md-4 whowe">
+                    <p style="text-align: justify;">
+                     K.A.S housing Pvt.Ltd,company has been founded by
+                     Mr.K.Alagarsamy at 1990 by implementing and constructing
+                     the indiviual residential villas and Commercial purpose
+                     building with high level construction method with proper
+                     alignment of labor and work quality with well-designed
+                     aechitecture</p>
+                     <p style="text-align: justify;">
+                     His Next Generation make that basic level firm to
+                     national standard management system by creating them as 
+                     an Office sector Named "K.A.S housing" by his son and 
+                     the successful managing Director of them firm
+                     "Er.A.GaneshBabu".
+                    </p>
+                    <p style="text-align: justify;">
+                      Wirh the sudden and tremendous growth of the company
+                      by lots of projects have been signed and executed
+                      successfully in short duration.
+                      </p>
+                  </div>
+                  <div class="col-sm-3 col-md-3 col-lg-3 whowe1">
+                    <p style="text-align: justify;">
+                      On July "K.A.S Housing" company increase it quality 
+                      in management system by make the company as
+                      "K.A.s Housing Pvt.Ltd.</p>
+                      <p style="text-align: justify;">
+                      However the Management and Team have being increased
+                      day by day our assurance forquality standard of our
+                      construction always at highest level whenever new trends
+                      have introducing to field it compete the circumstances.
+                      </p>
+                  </div>
+              </div>
+               <div class="col-sm-12 col-lg-12">
+                <div class="parallax-window" data-parallax="scroll" data-image-src="images/about.jpg">
+                   <h1 style="text-align: center;color: #fff;
+    transform: translateY(110%)">EVERYTHING IS DESIGNED, <br>BUT SOME THINGS ARE DESIGNED WELL...</h1>
+              
+                </div>
+               
+               </div>
+
+           
+                 <div class="col-sm-12 col-lg-12 pad1">
+             </div>
+              
+              <section id="wrapper" class="skewed">
+                <div class="layer bottom">
+                    <div class="content-wrap">
+                        <div class="content-body">
+                        <h1>Our Mission</h1>
+                        <p class="misvis">To be the pioneering & leading architectural construction
+in Madurai known as a symbol of trust and integrity built
+through our unmached quality work,timely project
+completion & personalized server at compitative prices.</p>
+                            
+                            </div>
+                            <img src="images/001.png" alt="">
+                        </div>
+                         </div>
+                         <div class="layer top">
+                             <div class="content-wrap">
+                                 <div class="content-body">
+                                     <h1>Our Vision</h1>
+                                     <p class="misvis"> To set new standards of ethics and excellence in delivering
+                                      to our customers superior quality & value for money
+                                      residential & commercial construction by employing a
+                                      team of highly motivated and focused professional.</p>
+                                 </div>
+                                 <img src="images/0005.png" alt="">
+        
+                             </div>
+                         </div>
+                         <div class="handle"></div>
+            </section>
+            
+
+        </div>
+      </div>
+    
+
+
+
+
+
+
+   
+    <!-- Footer -->
+
+    <footer id="footer" class="footer section"> 
+      <div class="footer-flex">
+        <div class="flex-item">
+          <a class="brand pull-left" href="#">
+            <img alt="" src="images/brand.png">
+            <div class="brand-info">
+              <div class="brand-name">K.A.S Housing</div>
+              <div class="brand-text">Pvt Ltd</div>
+            </div>
+          </a>
+        </div>
+        <div class="flex-item">
+          <div class="inline-block">© K.A.S Housing<br>All Rights Resevered</div>
+        </div>
+        <div class="flex-item">
+          <ul>
+            <li><a href="">Site Map</a></li>
+            <li><a href="">Term & Conditions</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="">Affiliatep</a></li>
+          </ul> 
+        </div>
+        <div class="flex-item">
+          <ul>
+            <li><a href="">Our Location</a></li>
+            <li><a href="">Career</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul> 
+        </div>
+        <div class="flex-item">
+          <ul>
+            <li class="active"><a href="">ENG</a></li>
+            
+          </ul> 
+        </div>
+        <div class="flex-item">
+          <div class="social-list">
+            <a href="" class="icon ion-social-twitter"></a>
+            <a href="" class="icon ion-social-facebook"></a>
+            <a href="" class="icon ion-social-googleplus"></a>
+            <a href="" class="icon ion-social-linkedin"></a>
+            <a href="" class="icon ion-social-dribbble-outline"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- jQuery -->
+
+
+<script src="js/animsition.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/sly.min.js"></script>
+
+
+
+
+
+<!-- Scripts -->
+<script src="js/scripts.js"></script> 
+<script src="js/rev-slider-init.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    let wrapper = document.getElementById('wrapper');
+    let topLayer = wrapper.querySelector('.top');
+    let handle = wrapper.querySelector('.handle');
+    let skew = 0;
+    let delta = 0;
+  
+    if(wrapper.className.indexOf('skewed') != -1){
+      skew = 1000;
+    }
+    
+    wrapper.addEventListener('mousemove', function(e){
+      delta = (e.clientX - window.innerWidth / 2) * 0.5;
+    
+      handle.style.left = e.clientX + delta + 'px';
+  
+      topLayer.style.width= e.clientX + skew + delta + 'px';
+    });
+  });
+</script>
+</body>
+</html>

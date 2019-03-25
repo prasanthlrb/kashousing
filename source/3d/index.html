@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <title>jQuery Carousel.js Rotator Plugin Demo</title> 
+  <link rel="stylesheet" href="css/reset.css" /> 
+  <style>
+ 
+  .image-cli { border-radius:5px;}
+		.poster-main{
+			position: relative;
+      margin:30px auto;
+      max-width:1000px;
+		}
+		.poster-main .poster-list .poster-item{
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.poster-main .poster-btn{
+			position: absolute;
+			top: 0;
+			cursor: pointer;
+		}
+		.poster-main .poster-prev-btn{
+			left: 0;
+			background: url("images/btn_l.png") no-repeat center center;
+		}
+		.poster-main .poster-next-btn{
+			right: 0;
+			background: url("images/btn_r.png") no-repeat center center;
+		}
+		
+	</style> 
+ </head> 
+ <body> 
+
+ <h1 style="margin:150px auto 30px auto; text-align:center; color:#fff;">jQuery Carousel.js Rotator Plugin Demo</h1>
+  <div class="poster-main" id="carousel" data-setting='{
+							"width":1000,
+							"height":500,
+							"posterWidth":600,
+							"posterHeight":500,
+							"scale":0.8,
+							"speed":1000,
+							"autoPlay":true,
+							"delay":3000,
+							"verticalAlign":"middle"
+							}'> 
+   <div class="poster-btn poster-prev-btn"></div> 
+   <ul class="poster-list"> 
+    <li class="poster-item"><a href="#"><img src="https://unsplash.it/600/500?image=237" alt="" width="100%" class="image-cli" /></a></li> 
+    <li class="poster-item"><a href="#"><img src="https://unsplash.it/600/500?image=239" alt="" width="100%" class="image-cli" /></a></li> 
+    <li class="poster-item"><a href="#"><img src="https://unsplash.it/600/500?image=250" alt="" width="100%" class="image-cli" /></a></li> 
+    <li class="poster-item"><a href="#"><img src="https://unsplash.it/600/500?image=223" alt="" width="100%" class="image-cli" /></a></li> 
+    <li class="poster-item"><a href="#"><img src="https://unsplash.it/600/500?image=195" alt="" width="100%" class="image-cli" /></a></li> 
+   </ul> 
+   <div class="poster-btn poster-next-btn"></div> 
+  </div> 
+  <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+ <script src="js/Carousel.js"></script> 
+  <script>
+		$(function(){
+			Carousel.init($("#carousel"));
+			$("#carousel").init();
+		});
+	</script> 
+ </body>
+</html>

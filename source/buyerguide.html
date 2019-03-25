@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+
+<title>K.A.S - Housing</title> 
+
+<!-- Styles -->
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Poppins:300,400,500,600,700" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+<div class="animsition">  
+  <div class="wrapper boxed">
+
+    <!-- Content CLick Capture-->
+
+    <div class="click-capture"></div>
+
+    <!-- Sidebar Menu-->
+
+    <div class="menu">
+      <span class="close-menu icon-cross2 right-boxed"></span>
+      <div class="menu-lang right-boxed">
+        <img alt="" class="img-responsive1" src="images/mission.png" >
+        
+      </div>
+      <ul class="menu-list right-boxed">
+       <li class="active">
+          <a  href="index.html">Home</a>
+          
+        </li>
+        <li>
+          <a href="about.html">About</a>
+         
+        </li>
+         <li>
+          <a href="ourservice.html">Our Metrial</a>
+         
+        </li>
+         <li>
+          <a href="facilities.html">Feacility</a>
+         
+        </li>
+       
+        <li>
+          <a href="#">Property Details</a>
+          
+        </li>
+        <li>
+          <a href="#">Buyer Guide</a>
+          
+        </li>
+        <li>
+          <a href="#">Gallery</a>
+          
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+         
+        </li>
+      </ul>
+      <div class="menu-footer right-boxed">
+        <div class="social-list">
+          <a href="" class="icon ion-social-twitter"></a>
+          <a href="" class="icon ion-social-facebook"></a>
+          <a href="" class="icon ion-social-googleplus"></a>
+          <a href="" class="icon ion-social-linkedin"></a>
+          <a href="" class="icon ion-social-dribbble-outline"></a>
+        </div>
+        <div class="copy">© K.A.S Housing Pvt Ltd 2017. All Rights Reseverd<br> Design by LRB TECH</div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+
+    <header class="navbar boxed js-navbar">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="brand" href="#">
+          <img class="brand-img" alt="" src="images/logo-header.png">
+        
+      </a>
+
+      <div class="social-list hidden-xs">
+        <a href="" class="icon ion-social-twitter"></a>
+        <a href="" class="icon ion-social-facebook"></a>
+        <a href="" class="icon ion-social-googleplus"></a>
+        <a href="" class="icon ion-social-linkedin"></a>
+        <a href="" class="icon ion-social-dribbble-outline"></a>
+      </div>
+
+      <div class="navbar-spacer hidden-sm hidden-xs"></div>
+
+      <address class="navbar-address hidden-sm hidden-xs">call us: <span class="text-dark">(+91) 452 4231010</span></address>
+    </header>
+
+
+
+    <!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+
+<script src="js/animsition.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/sly.min.js"></script>
+
+
+
+
+
+<!-- Scripts -->
+<script src="js/scripts.js"></script> 
+<script src="js/rev-slider-init.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    let wrapper = document.getElementById('wrapper');
+    let topLayer = wrapper.querySelector('.top');
+    let handle = wrapper.querySelector('.handle');
+    let skew = 0;
+    let delta = 0;
+  
+    if(wrapper.className.indexOf('skewed') != -1){
+      skew = 1000;
+    }
+    
+    wrapper.addEventListener('mousemove', function(e){
+      delta = (e.clientX - window.innerWidth / 2) * 0.5;
+    
+      handle.style.left = e.clientX + delta + 'px';
+  
+      topLayer.style.width= e.clientX + skew + delta + 'px';
+    });
+  });
+</script>
+</body>
+</html>
